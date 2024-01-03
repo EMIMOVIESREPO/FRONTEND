@@ -1,0 +1,49 @@
+.card-body {
+    display: flex;
+    align-items: center;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: row; 
+  }
+  .btn_detail{
+    margin-top: 300px;
+  }
+  
+  .card-img-left {
+    width: 150px; 
+    height: auto; 
+    margin-right: 20px; 
+  }
+  
+  .text-content {
+    flex: 1; 
+  }
+  
+  .card {
+    transition: transform 0.3s ease; /* Transition pour des changements fluides */
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Agrandissement de la carte au survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre plus prononcée */
+  }
+  h2 {
+    margin-left: 550px;
+    color: white;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    /* Transition for smooth color change */
+    transition: color 0.3s ease;
+    padding: 15px;
+  }
+  
+  h2:hover {
+    padding: 15px;
+    color: black;
+  }
+  

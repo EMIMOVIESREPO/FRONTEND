@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>Welcome to our Platform!</h1>
+<mat-dialog-content class="mat-typography">
+  <p>Explore a world of diverse content and unique experiences.</p>
+
+  <p>🌟 Discover exclusive features tailored to enhance your browsing experience.</p>
+
+  <p>🚀 Join our community to unlock premium benefits and personalized preferences.</p>
+
+  <p>Start your journey today and embrace a new level of convenience and customization!</p>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+  <!-- White button -->
+  <button mat-button mat-dialog-close class="mat-raised-button mat-button-lg" color="warn">Maybe Later</button>
+  <!-- Primary button -->
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial class="mat-raised-button mat-button-lg" color="primary" (click)="openLoginDialog()">Join Now</button>
+</mat-dialog-actions>

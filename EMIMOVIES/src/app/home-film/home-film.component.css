@@ -1,0 +1,34 @@
+.card-body {
+  display: flex;
+  align-items: center;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row; 
+}
+.btn_detail{
+  margin-top: 300px;
+}
+
+.card-img-left {
+  width: 150px; 
+  height: auto; 
+  margin-right: 20px; 
+}
+
+.text-content {
+  flex: 1; 
+}
+
+.card {
+  transition: transform 0.3s ease; /* Transition pour des changements fluides */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Agrandissement de la carte au survol */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre plus prononcée */
+}
+body{
+  background-color: brown;
+}

@@ -1,0 +1,12 @@
+.image-container{
+     height: auto;
+     background-repeat: no-repeat;
+     margin-left: 300px; 
+     transition: background-image 0.3s ease;    
+}
+.image-container:hover{
+    background-image: url('https://insaneimpact.com/storage/2020/06/movie-licensing-header.jpg');
+}
+.dialog-background {
+    background-color: brown;
+  }

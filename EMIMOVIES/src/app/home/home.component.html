@@ -1,0 +1,15 @@
+<body >
+ 
+    <div class="col-md-5 mb-3 text-center"> <!-- Ajout de la classe text-center pour centrer -->
+      <form class="d-flex" (ngSubmit)="filterResults(filter.value)">
+        <input class="form-control me-2" style="border: 1.3px solid lightslategray;width: 500px;" type="search" placeholder="Search movie" aria-label="Search" #filter>
+        <button class="btn btn-outline-light animated-button" type="submit" style="background-color:black;">Search</button> <!-- Ajout de la classe animated-button -->
+      </form>
+    </div>
+    <div class="row" style="background-color: brown;" >
+      <!-- Use *ngFor to iterate over films -->
+      <app-home-film class="col-md-4" *ngFor="let film of filmsfiltred" [film]="film">
+      </app-home-film>
+    </div>
+  
+</body>

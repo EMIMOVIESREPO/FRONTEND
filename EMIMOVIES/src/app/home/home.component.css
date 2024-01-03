@@ -1,0 +1,33 @@
+
+/* Custom styles for the card */
+.card {
+  width: 18rem; /* Adjust the width as needed */
+  height: auto; /* Adjust the height as needed */
+}
+
+.card-img-top {
+  height: 300px; /* Adjust the image height as needed */
+  object-fit: cover;
+}
+/* Ajout de styles pour la classe text-center */
+.text-center {
+  display: flex;
+  justify-content:center;
+  margin-left: 400px;
+  padding-top: 5px;
+}
+
+/* Ajout de styles pour l'animation du bouton */
+.animated-button {
+  transition: all 0.3s ease; /* Ajout d'une transition pour l'animation */
+}
+
+/* Définition des effets d'animation au survol du bouton */
+.animated-button:hover {
+  transform: scale(1.1); /* Agrandir légèrement le bouton au survol */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Ajout d'une ombre au survol */
+}
+body{
+  background-color: brown;
+}
+

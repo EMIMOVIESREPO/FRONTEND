@@ -1,0 +1,18 @@
+<body><div class="card mb-4 shadow-sm">
+  <div class="card-body">
+    <div class="content-wrapper">
+
+      <img class="card-img-left" src="{{ getUrl(film.poster_path) }}" alt="{{ film.title }}">
+      <div class="text-content">
+        <h5 class="card-title">{{ film.title }}</h5>
+        <p class="card-text">Release Date: {{ film.release_date }}</p>
+        <p class="card-text d-inline me-4">Vote Average: {{ film.vote_average }}</p>
+      </div>
+    <div class="btn_detail">
+      <a [routerLink]="['/details', film.id]" class="btn detail btn-primary d-inline ms-3" style="background-color: black;">Details</a>
+    </div>   
+    </div>
+  </div>
+</div>
+</body>
+

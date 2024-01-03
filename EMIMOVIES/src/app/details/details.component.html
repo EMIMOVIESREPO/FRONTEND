@@ -1,0 +1,66 @@
+
+<body>
+<div class="container mt-2" style="padding: 0px; margin-bottom: 0px; margin-top: 0px;" >
+  <div class="row" style="padding: 0px;">
+    <div class="col-md-4">
+      <img style="height: 95%; width: 100%;" src="https://image.tmdb.org/t/p/w500/{{ filmdetails.poster_path }}"
+           alt="{{ filmdetails.title }}" class="img-fluid " />
+    </div>
+    <div class="col-md-8">
+      <h2 class="mb-4">{{ filmdetails.title }}</h2>
+      <p class="lead"><strong>Release Date:</strong> {{ filmdetails.release_date }}</p>
+      <p><strong>Overview:</strong> {{ filmdetails.overview }}</p>
+      <p><strong>Runtime:</strong> {{ filmdetails.runtime }} minutes</p>
+      <p><strong>Popularity:</strong> {{ filmdetails.popularity }}</p>
+      <p><strong>Vote Average:</strong> {{ filmdetails.vote_average }}</p>
+      <p><strong>Budget:</strong> {{ filmdetails.budget }}$</p>
+      <div *ngFor="let gn of genre" class="d-inline-block mr-2">
+        <span class="badge badge-primary" style="background-color: black;">{{ gn.name }}</span>
+      </div>
+     <div>   
+         <button class="btn btn-primary mt-3" style="background-color: black;" (click)="addToFavorites()"> Add to Favorite
+       </button>
+  </div>
+  
+    </div>
+    
+  </div>
+</div>
+<!-- Votre contenu existant -->
+<div class="container mt-4">
+  <h3><b>Comments</b></h3>
+  <div *ngIf="comments.length === 0">
+      <p>No comments yet, be the first to comment</p>
+  </div>
+  <div class="card mb-2" style="background-color:burlywood;" *ngFor="let comment of comments">
+    <div class="card-body">
+      <p class="text-muted">Posted by: {{ comment.person }}</p>
+      <p>{{ comment.text }}</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-4">
+  <h3><b>Add Your Comment</b></h3>
+  <form (ngSubmit)="addComment()" #commentForm="ngForm">
+    <div class="form-group">
+      <textarea class="form-control" style="background-color: burlywood;" rows="3" placeholder="Enter your name" name="commentPerson" [(ngModel)]="newComment.person" required></textarea><br/>
+      <textarea class="form-control"style="background-color: burlywood;" rows="3" placeholder="Enter your comment" name="commentText" [(ngModel)]="newComment.text" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" style="margin-top: 15px;background-color: black;"><b>Add Comment</b></button>
+  </form>
+</div>
+
+
+<!-- Bootstrap JS and Popper.js (Optional) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
